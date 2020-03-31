@@ -6,16 +6,16 @@ import java.util.Map;
 public class Challenge3Find2NumbersThatAddUp {
 
     public int[] findSum(int[] arr, int n) {
-        int[] result = new int[2];
+        int[] answer = new int[2];
         // write your code here
 
         Map<Integer, Integer> hmMap = new HashMap<>();
         for (int x : arr) {
 
             if (hmMap.containsKey(x)) {
-                result[0] = hmMap.get(x);
-                result[1] = x;
-                return result;
+                answer[0] = hmMap.get(x);
+                answer[1] = x;
+                return answer;
             } else {
                 int currDiff = n - x;
                 hmMap.put(currDiff, x);
